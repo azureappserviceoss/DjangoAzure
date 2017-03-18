@@ -20,6 +20,7 @@ urlpatterns = [
      
     url(r'^$', home, name='home'),
     url(r'^mailingsystem/', include('mailingsystem.urls')),
+    url(r'^firsttemplate/', views.first),
     url(r'^contact$', contact, name='contact'),
     url(r'^about', about, name='about'),
    url(r'^login/$', login, {
