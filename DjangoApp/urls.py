@@ -3,7 +3,7 @@ Definition of urls for DjangoApp.
 """
 
 from datetime import datetime
-from django.conf.urls import url
+from django.conf.urls import include, url
 from app.forms import BootstrapAuthenticationForm
 from app.views import *
 from app.models import *
