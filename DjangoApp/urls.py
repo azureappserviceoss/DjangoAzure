@@ -21,6 +21,7 @@ urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^mailingsystem/', include('mailingsystem.urls')),
     url(r'^firsttemplate/', first),
+    url(r'^getdata/', data),
     url(r'^contact$', contact, name='contact'),
     url(r'^about', about, name='about'),
    url(r'^login/$', login, {

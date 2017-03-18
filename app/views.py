@@ -15,6 +15,26 @@ def first(request):
         'address':'Lucar.io'
     })
 
+def data(request):
+    #if post request came
+    if request.method == 'POST':
+        #getting values from post
+        name = request.POST.get('name')
+        email = request.POST.get('pokemon')
+        phone = request.POST.get('website')
+
+        #adding the values in a context variable
+        context = {
+            'name': name,
+            'pokemon': email,
+            'website': phone
+        }
+        return render(request, 'app/showdata.html', context)
+    else:
+        #if post request is not true
+        #returing the form template
+        return render(request, 'app/form.html')
+
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
