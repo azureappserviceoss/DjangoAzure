@@ -14,7 +14,7 @@ def first(request):
         'course':'CS 3240',
         'address':'Lucar.io'
     })
-
+@csrf_exempt
 def data(request):
     #if post request came
     if request.method == 'POST':
