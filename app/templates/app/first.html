@@ -5,6 +5,26 @@
     <title>Django Templates Tutorial</title>
 </head>
 <body>
-    <h1>Our First Template, of many...</h1>
+<div style="width:50%;margin:0 auto; font-size:250%">
+    <h1>User Profile</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>{{ name }}</td>
+        </tr>
+        <tr>
+            <th>Favorite Pokemon</th>
+            <td>{{ pname }}</td>
+        </tr>
+        <tr>
+            <th>Course</th>
+            <td>{{ course }}</td>
+        </tr>
+        <tr>
+            <th>Website</th>
+            <td>{{ address }}</td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

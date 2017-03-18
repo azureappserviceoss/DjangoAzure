@@ -8,7 +8,12 @@ from django.template import RequestContext
 from datetime import datetime
 
 def first(request):
-    return render(request, 'app/first.html')
+    return render(request, 'app/first.html', {
+        'name':'Alan',
+        'pname':'Lucario',
+        'course':'CS 3240',
+        'address':'Lucar.io'
+    })
 
 def home(request):
     """Renders the home page."""
