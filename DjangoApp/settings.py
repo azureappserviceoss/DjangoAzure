@@ -10,6 +10,7 @@ TEMPLATE_DEBUG = DEBUG
 
 ALLOWED_HOSTS = (
     'localhost',
+    'cs3240.herokuapp.com'
 )
 
 ADMINS = (
