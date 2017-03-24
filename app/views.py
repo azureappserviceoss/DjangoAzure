@@ -48,3 +48,17 @@ def about(request):
             'year':datetime.now().year,
         })
     )
+
+def signup(request):
+    """Renders the signup page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/signup.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'Sign up',
+            'message':'Sign up page',
+            'year':datetime.now().year,
+        })
+    )
