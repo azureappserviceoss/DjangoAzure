@@ -8,34 +8,6 @@ from django.template import RequestContext
 from datetime import datetime
 from django.views.decorators.csrf import csrf_exempt
 
-def first(request):
-    return render(request, 'app/first.html', {
-        'name':'Alan',
-        'pname':'Lucario',
-        'course':'CS 3240',
-        'address':'Lucar.io'
-    })
-@csrf_exempt
-def data(request):
-    #if post request came
-    if request.method == 'POST':
-        #getting values from post
-        name = request.POST.get('name')
-        email = request.POST.get('pokemon')
-        phone = request.POST.get('website')
-
-        #adding the values in a context variable
-        context = {
-            'name': name,
-            'pokemon': email,
-            'website': phone
-        }
-        return render(request, 'app/showdata.html', context)
-    else:
-        #if post request is not true
-        #returing the form template
-        return render(request, 'app/form.html')
-
 def home(request):
     """Renders the home page."""
     assert isinstance(request, HttpRequest)
